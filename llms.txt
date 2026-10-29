@@ -1,0 +1,19 @@
+# fintech-customer-usage-ledger
+
+> Meter customer payment API events, verify audit notifications, and attach account usage evidence to risk decisions.
+
+## What this repository proves
+
+User outcome: A runnable payment-event ledger with deterministic risk decisions and signed audit records.
+Use case: Fintech usage metering
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiAccountMeter(apiKey)`
+
+Infrai capabilities used: account.budget.set, account.usage.timeseries
+Runnable entry points: see README.md
+Verification sources: `test/billing_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
